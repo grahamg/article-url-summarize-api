@@ -9,6 +9,7 @@ const app = express();
 config();
 
 const GOOGLE_GEN_AI_API_KEY = process.env.GOOGLE_GEN_API_API_KEY;
+const GOOGLE_GEN_AI_API_MODEL = process.env.GOOGLE_GEN_AI_API_MODEL || 'gemini-pro';
 
 const meta = {
   service: 'article-parser',
@@ -24,6 +25,9 @@ app.get('/', async (req, res) => {
     return res.json(meta);
   }
 
+  const apiUrl = `https://generativelanguage.googleapis.com/v1beta3/models/
+    ${GOOGLE_GEN_AI_API_MODEL}?key=${GOOGLE_GEN_AI_API_KEY}`;
+  
   extract(url)
     .then((extractionResult) => {
       const apiUrl = "https://generativelanguage.googleapis.com/v1beta3/models/text-bison-001:generateText?key=AIzaSyCZcyspOWVjwtSizMayXpz5G6mueRM33Pw";
