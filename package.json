@@ -1,7 +1,7 @@
 {
-  "name": "article-extract-api",
+  "name": "article-url-summarize-api",
   "version": "0.0.1",
-  "description": "A restful api to extract the article text from linked news article.",
+  "description": "A restful api to extract the article text from linked news article and summarize it using google gemini ai.",
   "main": "server.js",
   "type": "module",
   "scripts": {
