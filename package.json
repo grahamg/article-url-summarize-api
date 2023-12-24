@@ -1,0 +1,16 @@
+{
+  "name": "article-extract-api",
+  "version": "0.0.1",
+  "description": "A restful api to extract the article text from linked news article.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Graham Greenfield",
+  "license": "MIT",
+  "dependencies": {
+    "@extractus/article-extractor": "^8.0.4",
+    "express": "^4.18.2"
+  }
+}
