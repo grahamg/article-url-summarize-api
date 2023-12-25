@@ -1,5 +1,7 @@
 # article-url-summarize-api
 
+A restful api to extract article text from a url and summarize it using Google Gemini.
+
 Example usage requests are noted below using several implementation methods.
 
 ```
