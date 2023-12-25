@@ -24,13 +24,11 @@ app.get('/', async (req, res) => {
   if (!url) {
     return res.json(meta);
   }
-
-  const apiUrl = `https://generativelanguage.googleapis.com/v1beta3/models/
-    ${GOOGLE_GEN_AI_API_MODEL}?key=${GOOGLE_GEN_AI_API_KEY}`;
   
   extract(url)
     .then((extractionResult) => {
-      const apiUrl = "https://generativelanguage.googleapis.com/v1beta3/models/text-bison-001:generateText?key=AIzaSyCZcyspOWVjwtSizMayXpz5G6mueRM33Pw";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta3/models/
+        ${GOOGLE_GEN_AI_API_MODEL}?key=${GOOGLE_GEN_AI_API_KEY}`;
       const aiRequestData = {
         prompt: {
           text: `Summarize this article verbosely in-detail in 500 words or as much up to that as possible.\n\n${extractionResult.content}`,
